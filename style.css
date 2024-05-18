@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /*============ COLORS ============*/
+
+  --light-grey: hsl(0, 0%, 95%);
+  --greyish-blue: #6d708d;
+  --white-color: hsl(0, 0%, 100%);
+  --Dark-Grayish-Blue: #494c5f;
+  --periwinkle-blue: hsl(237, 63%, 65%);
+  --Light-Grayish-Blue: #b3b5c6;
+  --Very-Light-Grayish-Blue: #f6f6fe;
+  --slate-grey: #6e728e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background: url(images/bg-top.svg), url(images/bg-bottom.svg);
+  background-position: top -37px right -195px, bottom left;
+  background-repeat: no-repeat;
+  background-color: var(--light-grey);
+}
+.pattern-top {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.heading {
+  display: grid;
+  place-items: center;
+  color: var(--slate-grey);
+  margin-top: 4.5rem;
+}
+.toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  place-items: center;
+  margin-top: 40px;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.toggle p {
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 600;
+}
+.toggle-box {
+  width: 56px;
+  height: 32px;
+  display: block;
+  background: linear-gradient(to right, #a2a7f0 0%, #696edd 100%);
+  border-radius: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+.toggle-box .circle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: var(--white-color);
+  border-radius: 1000px;
+  margin: 4px;
+  margin-left: 28px;
+  transition: 0.5s;
+}
+.toggle-box:hover {
+  opacity: 0.5;
+}
+.pricing__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3rem 0;
+  border-radius: 10px;
+}
+.pricing__secondary {
+  background-color: var(--white-color);
+  width: 350px;
+  height: 453px;
+}
+#sec1 {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#sec2 {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.pricing__primary {
+  background: linear-gradient(to right, #a2a7f0 0%, #696edd 100%);
+  width: 350px;
+  height: 501px;
+  border-radius: 10px;
+}
+#annually {
+  display: none;
+}
+.pricing_container_heading {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: bold;
+  color: var(--slate-grey);
+  margin-top: 2.5rem;
+}
+.pricing__primary .pricing_container_heading {
+  color: var(--white-color);
+  margin-top: 4rem;
+}
+.price {
+  font-size: 4.5rem;
+  line-height: 71px;
+  letter-spacing: -2.16px;
+  margin: 2rem 0;
+  color: #4a4d60;
+}
+.pricing__primary .price {
+  color: var(--white-color);
+}
+.container__list li {
+  margin: 0 auto;
+  width: 288px;
+  border-bottom: 1px solid hsl(234, 14%, 88%);
+  font-size: 15px;
+  color: var(--slate-grey);
+  font-weight: 700;
+  padding: 12px 0 12px 0;
+}
+#list_item {
+  border-top: 1px solid hsl(234, 14%, 88%);
+}
+.pricing__primary .container__list li {
+  border-color: var(--white-color);
+  color: var(--white-color);
+}
+a {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  width: 18rem;
+  height: 2.75rem;
+  background: linear-gradient(to right, #a2a7f0 0%, #696edd 100%);
+  margin-top: 2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out;
+}
+a:hover {
+  background: none;
+  border: 1px solid #6d72de;
+  color: #6d72de;
+}
+.pricing__primary #btn_primary {
+  background: var(--white-color);
+  color: #696edd;
+}
+.pricing__primary #btn_primary:hover {
+  background: none;
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
+}
+a {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--white-color);
+  letter-spacing: 1.39px;
+}
+
+/*============= RESPONSIVENESS ==============*/
+@media (max-width: 1124px) {
+  .pricing__container {
+    flex-direction: column;
+  }
+  .pricing__secondary {
+    width: 327px;
+    height: 453px;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 0px 20px #c9cbf3;
+  }
+  .pricing__primary {
+    width: 326px;
+    height: 454px;
+    box-shadow: 0 0px 20px #c9cbf3;
+  }
+  .pricing_container_heading {
+    margin-top: 2.5rem;
+  }
+  .pricing__primary .pricing_container_heading {
+    margin-top: 2.5rem;
+  }
+  .container__list li {
+    width: 269px;
+  }
+}
